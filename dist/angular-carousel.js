@@ -658,7 +658,9 @@ angular.module('angular-carousel').run(['$templateCache', function($templateCach
 
                         function onOrientationChange() {
                             updateContainerWidth();
-                            goToSlide();
+                            if(!locked) {
+                              goToSlide();
+                            }
                         }
 
                         // handle orientation change
